@@ -9,7 +9,15 @@
 
 		<script>
 			// read user's number (popup window)
-			
+			var x = Math.floor(Math.random()*5)+1
+			console.log(x)
+			choice = prompt("Zgadnij liczbe od 1 do 5")
+			if(choice == x){
+				alert("Good Work")
+			}
+			else{
+				alert("Sorry")
+			}
 			// create a random number
 			
 			// compare the numbers
