@@ -6,7 +6,18 @@
 	</head>
 	<body>
 		<h1>Create mobile phone</h1>
+		<button id="button" type="button" onclick="myclick()">Specs</button>
 		<script>
+			var myPhone = {
+					brand:		'Xiaomi',
+					version:	5,
+					broken:		false,
+					memory:		['128GB', '2GB'],
+					apps:		{driving:'uber', games:'pixel dungeon', social:'facebook'}
+			};
+			function myclick(){
+				alert(myPhone.brand+'\n'+myPhone.version+'\n'+myPhone.broken+'\n'+myPhone.memory+'\n'+myPhone.apps.driving+' '+myPhone.apps.games+' '+myPhone.apps.social)
+			}
 		</script>
 	</body>
 </html>

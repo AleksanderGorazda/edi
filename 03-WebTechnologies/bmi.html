@@ -15,15 +15,20 @@
 						height: null,
 						enterData: function(){
 							// enter weight and height, and assign them to the object properties
+							weight = prompt('Wprowadź wagę')
+							height = prompt('Wprowadź wzrost')
 						},
 						calculate: function(){
-							return // create a formula for calculating bmi
+							return (weight/(height*height))// create a formula for calculating bmi
 						},
 						display: function(){
+							alert(BMI.calculate())
 							// display the result in a popup window
 						}
 				}
-			
+				BMI.enterData()
+				BMI.calculate()
+				BMI.display()
 				// call BMI methods
 				// ...
 			
