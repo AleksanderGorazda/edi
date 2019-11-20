@@ -4,14 +4,22 @@
 		<title>Create DOM elements</title>
 		<meta charset="UTF-8">
 	</head>
+	
 	<body>
-		<h3>Sticks and stones may break my bones, but words will never harm me.</h3>
+		<h3 id="text" onmouseout="out()" onmouseover="over()">Sticks and stones may break my bones, but words will never harm me.</h3>
 		<script>
-			// a JavaScript code here ...
-			
-			// Translation:
-			// Kije i kamienie kości mi połamią, ale twoje słowa nigdy mnie nie zranią
-			
-		</script>
+				function over(){
+					document.getElementById("text").innerHTML = "Kije i kamienie kości mi połamią, ale twoje słowa nigdy mnie nie zranią"
+				}
+				function out(){
+					document.getElementById("text").innerHTML = "Sticks and stones may break my bones, but words will never harm me."
+				}
+				// a JavaScript code here ...
+				
+				// Translation:
+				// Kije i kamienie kości mi połamią, ale twoje słowa nigdy mnie nie zranią
+				
+			</script>	
 	</body>
+	
 </html>

@@ -4,10 +4,10 @@
 		<title>Pink Floyd</title>
 		<meta charset="UTF-8">
 	</head>
-	<body>
-		<h1>Another Brick in the Wall</h1>
-		<h3>Pink Floyd</h3>
-		<p>We don't need no education<br>
+	<body ondblclick="doubleKlik()">
+		<h1 id="title" onclick="klik()">Another Brick in the Wall</h1>
+		<h3 id="band" onclick="klikBand()">Pink Floyd</h3>
+		<p id="text" onclick="klikText()" oncopy="kopia()">We don't need no education<br>
 		We don't need no thought control<br>
 		No dark sarcasm in the classroom<br>
 		Teachers leave them kids alone<br>
@@ -15,11 +15,38 @@
 		All in all it's just another brick in the wall<br>
 		All in all you're just another brick in the wall</p>
 		
-		<p style="visibility: hidden;">Pink Floyd were an English rock band formed in London.<br>
+		<p id="desc" style="visibility: hidden;" onclick="obrazek()">Pink Floyd were an English rock band formed in London.<br>
 		They achieved international acclaim with their progressive<br>
 		and psychedelic music.</p>
 		
 		<script>
+			var count = 0
+			function klik(){
+				if(count==0){
+					count = 1
+					document.getElementById("title").innerHTML = document.getElementById("title").innerHTML + " Part 2"
+				}
+				else{
+
+				}
+			}
+			function klikBand(){
+				document.getElementById("desc").style = "visibility: visible;"
+			}
+			function klikText(){
+				document.getElementById("text").style = "font-style: italic;"
+			}
+			function doubleKlik(){
+				document.body.style = "background-color: yellow;"
+			}
+			function kopia(){
+				alert("Copyright")
+			}
+			function obrazek(){
+				var obraz = document.createElement("img")
+				obraz.src="pink.jpg"
+				document.body.appendChild(obraz)
+			}
 			// a JavaScript code here ...
 			
 		</script>

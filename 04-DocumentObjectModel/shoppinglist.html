@@ -10,16 +10,22 @@
     <h1>Shopping List</h1>
     <p>
         New item: <input type="text" name="item">
-        <button type="button">Add</button>
+        <button onclick="klik()" type="button">Add</button>
     </p>
     <h3>List of items</h3>
-    <ol>
+    <ol id="list">
         <li>cooking oil</li>
         <li>breakfast cereal</li>
         <li>bread</li>
     </ol>
 
     <script>
+        function klik(){
+            var inp = document.getElementsByTagName("input")[0].value
+            var li = document.createElement("li")
+            li.innerText = inp
+            document.getElementById("list").appendChild(li)
+        }
     	// a JavaScript code here ...
 
     </script>
