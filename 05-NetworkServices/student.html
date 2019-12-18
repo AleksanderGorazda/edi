@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Student</title>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<h1>Student</h1>
+	<p>Open a console and then click the button</p>
+	<input type="button" value="Display student's data" onclick="read()">
+	<p id="personalData"></p>
+
+	<script>
+		function read() {
+			var file = new XMLHttpRequest()
+			file.open("GET", "file:///C:/Users/s-115-29/Desktop/edi/05-NetworkServices/personal.json", true)
+			if (file.readyState === 4) {
+				if(file.status===200 || file.status===0){
+					var info = file.response
+					document.getElementById("personalData").innerHTML = info;
+				}
+			}
+		
+		file.send();
+			}
+	</script>
+
+</body>
+
+</html>
